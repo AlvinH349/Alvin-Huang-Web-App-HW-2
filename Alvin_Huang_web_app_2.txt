@@ -5,32 +5,32 @@
 (lambda (num)
 
 ; use loop to define the numbers, index and result
-(let loop ( (i 0) (r 0) (number num) )
+(let loop ( (i 0) (r 0) (nums num) )
 
 ;The rightmost digit should be what it takes to get the sum to be a multiple of 10
 ;check if number is equal to 0 or the remainder of the result when it is divided by 10 equals to 0
      (if (= 0 number) (= 0 (remainder r 10))
 
 ; if it is true then have the number be  divided by 10 through a loop
-          (loop (quotient number 10)
+          (loop (quotient nums 10)
 
 ; increase the index by 1
                 (+ i 1)
 
 ;Add the numbers in the even positions. 
 ; add the result if it is even by the index
-                (+ result
+                (+ r
 
 
                    (if (even? i)
 
 ;Add the numbers in the odd positions, except the rightmost digit. 
 ;else take the remainder of nums when divding by 10 (assumed to be odd)
-                       (remainder number 10)
+                       (remainder nums 10)
 
 ; Multiply every even-position digit (from right) by two. 
 ;define "that" to be 2 multiplied with remainder of nums divided by 10
-                       (let ((that (* 2 (remainder number 10))))
+                       (let ((that (* 2 (remainder nums 10))))
 
 ; Add these last two values together. 
 ; add the remainder of "that" divided by 10 and the result of that divided by 10
@@ -50,5 +50,4 @@
 
 ); close lambda
 
-); close 1
-
+); close algo
