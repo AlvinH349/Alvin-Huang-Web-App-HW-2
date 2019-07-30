@@ -9,7 +9,7 @@
 
 ;The rightmost digit should be what it takes to get the sum to be a multiple of 10
 ;check if number is equal to 0 or the remainder of the result when it is divided by 10 equals to 0
-     (if (= 0 number) (= 0 (remainder r 10))
+     (if (= 0 nums) (= 0 (remainder r 10))
 
 ; if it is true then have the number be  divided by 10 through a loop
           (loop (quotient nums 10)
