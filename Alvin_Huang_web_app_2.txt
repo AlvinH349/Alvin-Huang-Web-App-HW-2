@@ -1,15 +1,17 @@
-; call thing input as algo ; close 1
+ ; call thing input as algo ; close 1
 (define algo
 
-; use lambda to take num (to be used incline)
-(lambda (num)
+    ; use lambda to take num (to be used incline)
+  (lambda (num)
+
 
 ; use loop to define the numbers, index and result
-(let loop ( (i 0) (r 0) (nums num) )
+    (let loop ((nums num) (r 0) (i 0))
+
 
 ;The rightmost digit should be what it takes to get the sum to be a multiple of 10
 ;check if number is equal to 0 or the remainder of the result when it is divided by 10 equals to 0
-     (if (= 0 nums) (= 0 (remainder r 10))
+      (if (= 0 (remainder r 10)) (= 0 nums) 
 
 ; if it is true then have the number be  divided by 10 through a loop
           (loop (quotient nums 10)
@@ -21,21 +23,18 @@
 ; add the result if it is even by the index
                 (+ r
 
-
-                   (if (even? i)
-
 ;Add the numbers in the odd positions, except the rightmost digit. 
 ;else take the remainder of nums when divding by 10 (assumed to be odd)
-                       (remainder nums 10)
+                   (if (even? i) (remainder nums 10)
 
 ; Multiply every even-position digit (from right) by two. 
 ;define "that" to be 2 multiplied with remainder of nums divided by 10
                        (let ((that (* 2 (remainder nums 10))))
 
+
 ; Add these last two values together. 
 ; add the remainder of "that" divided by 10 and the result of that divided by 10
                          (+ (remainder that 10) (quotient that 10))
-
 ); addition of remainder of "that" divided by 10 and the result of that divided by 10
 
 ); 2nd let
