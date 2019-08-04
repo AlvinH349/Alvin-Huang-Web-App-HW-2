@@ -8,3 +8,7 @@ Another way to input is:
 
 Multiple numbers:
 (map algo '(number1 number2))
+
+if you use Drracket, please include 
+#lang racket
+above to define the language
