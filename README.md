@@ -1,8 +1,8 @@
 # Alvin-Huang-Web-App-HW-2
 Luhn Algorithm
-This is a program that I ran on racket aka Drracket
+This is a program that I ran on racket aka Drracket.
 To input a number place it as (algo number) and the result will be true or false.
-Make sure to enter a 16 digit number
+Make sure to enter a 16 digit number.
 
 Another way to input is:
 (algo 'number)
