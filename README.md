@@ -13,3 +13,4 @@ Multiple numbers:
 if you use Drracket, please include 
 #lang racket
 above to define the language
+below you can copy and paste the code
